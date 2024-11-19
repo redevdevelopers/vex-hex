@@ -1,8 +1,8 @@
 <p align="center">
-  <img width="500" alt="osu! logo" src="assets/lazer.png">
+  <img width="500" alt="vex logo" src="vex.png">
 </p>
 
-# osu!
+# vex! by hexkl
 
 [![Build status](https://github.com/ppy/osu/actions/workflows/ci.yml/badge.svg?branch=master&event=push)](https://github.com/ppy/osu/actions/workflows/ci.yml)
 [![GitHub release](https://img.shields.io/github/release/ppy/osu.svg)](https://github.com/ppy/osu/releases/latest)
@@ -10,42 +10,29 @@
 [![dev chat](https://discordapp.com/api/guilds/188630481301012481/widget.png?style=shield)](https://discord.gg/ppy)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/osu-web/localized.svg)](https://crowdin.com/project/osu-web)
 
-A free-to-win rhythm game. Rhythm is just a *click* away!
-
-This is the future – and final – iteration of the [osu!](https://osu.ppy.sh) game client which marks the beginning of an open era! Currently known by and released under the release codename "*lazer*". As in sharper than cutting-edge.
+# This project is based on osu!lazer, developed by ppy Pty Ltd.
 
 ## Status
 
-This project is under constant development, but we do our best to keep things in a stable state. Players are encouraged to install from a release alongside their stable *osu!* client. This project will continue to evolve until we eventually reach the point where most users prefer it over the previous "osu!stable" release.
+This project is under constant development, but we do our best to keep things in a stable state. For intrested in development contact "redevoncommunity@gmail.com" if you do wanna test it you can follow the steps below to get it set up and running! 
 
 A few resources are available as starting points to getting involved and understanding the project:
 
 - Detailed release changelogs are available on the [official osu! site](https://osu.ppy.sh/home/changelog/lazer).
 - You can learn more about our approach to [project management](https://github.com/ppy/osu/wiki/Project-management).
 - Track our current efforts [towards improving the game](https://github.com/orgs/ppy/projects/7/views/6).
-
-## Running osu!
-
-If you are just looking to give the game a whirl, you can grab the latest release for your platform:
-
-### Latest release:
-
-| [Windows 10+ (x64)](https://github.com/ppy/osu/releases/latest/download/install.exe) | macOS 12+ ([Intel](https://github.com/ppy/osu/releases/latest/download/osu.app.Intel.zip), [Apple Silicon](https://github.com/ppy/osu/releases/latest/download/osu.app.Apple.Silicon.zip)) | [Linux (x64)](https://github.com/ppy/osu/releases/latest/download/osu.AppImage) | [iOS 13.4+](https://osu.ppy.sh/home/testflight) | [Android 5+](https://github.com/ppy/osu/releases/latest/download/sh.ppy.osulazer.apk) |
+  
 |--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ------------- | ------------- | ------------- |
 
-You can also generally download a version for your current device from the [osu! site](https://osu.ppy.sh/home/download).
-
-If your platform is unsupported or not listed above, there is still a chance you can run the release or manually build it by following the instructions below.
-
-**For iOS/iPadOS users**: The iOS testflight link fills up very fast (Apple has a hard limit of 10,000 users). We reset it occasionally. Please do not ask about this. Check back regularly for link resets or follow [peppy](https://twitter.com/ppy) on twitter for announcements. Our goal is to get the game on mobile app stores in early 2024.
+**For iOS/iPadOS and Android users**: As for mobiles and iPad users we are currently only developing on the desktop version. After things looks very neatly then we will port it to mobile version. Make sure you stay tuned for that :)
 
 ## Developing a custom ruleset
 
-osu! is designed to allow user-created gameplay variations, called "rulesets". Building one of these allows a developer to harness the power of the osu! beatmap library, game engine, and general UX for a new style of gameplay. To get started working on a ruleset, we have some templates available [here](https://github.com/ppy/osu/tree/master/Templates).
+vex! is designed to allow user-created gameplay variations, called "rulesets". Building one of these allows a developer to harness the power of the vex! beatmap library, game engine, and general UX for a new style of gameplay. To get started working on a ruleset, we have some templates available [here](https://github.com/ppy/osu/tree/master/Templates).
 
 You can see some examples of custom rulesets by visiting the [custom ruleset directory](https://github.com/ppy/osu/discussions/13096).
 
-## Developing osu!
+## Developing vex!
 
 ### Prerequisites
 
@@ -60,11 +47,11 @@ When working with the codebase, we recommend using an IDE with intelligent code 
 Clone the repository:
 
 ```shell
-git clone https://github.com/ppy/osu
-cd osu
+git clone https://github.com/Redev-Corp/osu-hex
+cd osu-hex
 ```
 
-To update the source code to the latest commit, run the following command inside the `osu` directory:
+To update the source code to the latest commit, run the following command inside the `vex` directory:
 
 ```shell
 git pull
@@ -76,7 +63,7 @@ git pull
 
 You should load the solution via one of the platform-specific `.slnf` files, rather than the main `.sln`. This will reduce dependencies and hide platforms that you don't care about. Valid `.slnf` files are:
 
-- `osu.Desktop.slnf` (most common)
+- `osu.Desktop.slnf` (most common) (also osu is their base name file)
 - `osu.Android.slnf`
 - `osu.iOS.slnf`
 
@@ -129,14 +116,6 @@ Before committing your code, please run a code formatter. This can be achieved b
 We have adopted some cross-platform, compiler integrated analyzers. They can provide warnings when you are editing, building inside IDE or from command line, as-if they are provided by the compiler itself.
 
 JetBrains ReSharper InspectCode is also used for wider rule sets. You can run it from PowerShell with `.\InspectCode.ps1`. Alternatively, you can install ReSharper or use Rider to get inline support in your IDE of choice.
-
-## Contributing
-
-When it comes to contributing to the project, the two main things you can do to help out are reporting issues and submitting pull requests. Please refer to the [contributing guidelines](CONTRIBUTING.md) to understand how to help in the most effective way possible.
-
-If you wish to help with localisation efforts, head over to [crowdin](https://crowdin.com/project/osu-web).
-
-We love to reward quality contributions. If you have made a large contribution, or are a regular contributor, you are welcome to [submit an expense via opencollective](https://opencollective.com/ppy/expenses/new). If you have any questions, feel free to [reach out to peppy](mailto:pe@ppy.sh) before doing so.
 
 ## Licence
 
